@@ -1,5 +1,7 @@
 import 'package:app/color_constants/utils.dart';
+import 'package:app/screens/Cart_Item.dart';
 import 'package:app/screens/signup_screen.dart';
+import 'package:app/screens/splash_screeen.dart';
 import 'package:flutter/material.dart';
 
 class orderdone extends StatefulWidget {
@@ -15,14 +17,29 @@ class _orderdoneState extends State<orderdone> {
     return Scaffold( 
       appBar: AppBar(
         backgroundColor: Primarycolors.color2,
-        leading: IconButton(icon: Icon(Icons.arrow_left), onPressed: (){},)
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Primarycolors.color3,
+            ), 
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> CartScreen()));
+          },
+          )
       ),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
             child: Column(
                   children:  [
-                    Image.network('assets/circle.png' , height: 100,),
+                    Row(
+                      children: [
+                     const Padding(padding: EdgeInsets.only( top: 20, left: 70, right: 30)),
+                     Image.network('assets/circle.png' , height: 200,),
+                     const Padding(padding: EdgeInsets.only( top: 200, left: 80, right: 10)),
+                     Image.network('assets/circle.png' , height: 100,),
+                      ],
+                    ),   
                     const SizedBox(height: 40,),
                   const  Text(
                       'Order',
@@ -48,11 +65,11 @@ class _orderdoneState extends State<orderdone> {
                         fontSize: 15
                       ),
                     ),
-                    const SizedBox(height: 40,),
-                    Image.network('assets/img1.png' , height: 200,width: 200,),
-                     const SizedBox(height: 40,),
+                    const SizedBox(height: 20,),
+                    Image.network('assets/img1.png' , height: 100,),
+                     const SizedBox(height: 20,),
                           Container(
-                            width: 500,
+                            width: 400,
                             child: RawMaterialButton(
                               fillColor: Primarycolors.color1,
                               elevation: 1.0,
@@ -60,10 +77,8 @@ class _orderdoneState extends State<orderdone> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12.0)
                               ),
-                              onPressed: () {
-                                signup_screen();
-                                // Navigat
-                                //or.push(context, MaterialPageRoute(builder: (context)=> orderdone()));
+                              onPressed: () {  
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> splash_screen()));
                               },
                               child : const Text(
                                 "KIRIM" , 

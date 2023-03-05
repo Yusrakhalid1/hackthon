@@ -16,9 +16,9 @@ class _drawerState extends State<drawer> {
       appBar: AppBar(
         backgroundColor: Primarycolors.color1,
       ),
-        body:Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: const Text("Hello"),
+        body: const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text("Hello"),
         ),
     drawer: Drawer(
       backgroundColor: Primarycolors.color1,
@@ -27,7 +27,7 @@ class _drawerState extends State<drawer> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           ListTile(
-            title: Text('Shop' , style: TextStyle(color: Primarycolors.color2),),
+            title: const Text('Shop' , style: TextStyle(color: Primarycolors.color2),),
             onTap: () {
               // Navigate to item 1
             },

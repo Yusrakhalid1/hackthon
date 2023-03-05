@@ -1,4 +1,6 @@
 import 'package:app/color_constants/utils.dart';
+import 'package:app/pages/PlantBio.dart';
+import 'package:app/pages/another_bio.dart';
 import 'package:app/screens/favourite.dart';
 import 'package:app/screens/home_screen.dart';
 import 'package:app/navigation%20bar/navigation.dart';
@@ -28,8 +30,8 @@ class _home_screenState extends State<home_screen> {
         ),
       ),
       actions: const [
-          Icon(Icons.notifications , size: 25 , color: Primarycolors.color3,),
-        const SizedBox(width: 18,),
+        Icon(Icons.notifications , size: 25 , color: Primarycolors.color3,),
+         SizedBox(width: 18,),
          Icon(Icons.align_horizontal_right , size: 25 , color: Primarycolors.color3,),
       ],
      ),
@@ -56,75 +58,80 @@ class _home_screenState extends State<home_screen> {
                       Row(
               children: [
                 const Padding(padding: EdgeInsets.only(left: 70)),
-                Container(
-                height: 270,
-                width: 370,
-                decoration: const BoxDecoration(
-                  color: Primarycolors.color4,
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(4,4),
-                      blurRadius: 8,
-                      spreadRadius: 1,
-                      color: Primarycolors.color9
-                    )
-                  ],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30)
-                  ),
-                ),
-                child: Row(
-                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget> [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children:  [
-                        const  Padding(padding: EdgeInsets.all(12)),
-                        const Text(
-                         'Air Purifier',
-                         style: TextStyle(
-                           fontWeight: FontWeight.bold,
-                           letterSpacing: 3,
-                           fontSize: 14,
-                           color: Primarycolors.color3
-                         ),
-                   ),
-                 const SizedBox(height: 10,),
-                 const  Text(
-                         'Peperomia',
-                         style: TextStyle(
-                           fontWeight: FontWeight.bold,
-                           letterSpacing: 5,
-                           fontSize: 17,
-                           color: Primarycolors.color3
-                         ),
-                   ),
-                  const Padding(padding: EdgeInsets.only(left: 12)),
-                    const SizedBox(height: 80,),
-                   Row(
-                    children: [
-                       const Text(
-                          '\$400',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 15
-                          ),
-                          ), 
-                           const Padding(padding: EdgeInsets.only(right: 5)),
-                      Image.network('assets/favourite.png'),
-                  
-                            const Padding(padding: EdgeInsets.only(right: 5)),
-                             Image.network('assets/home4.png'),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => PlantBio())));
+                  },
+                  child: Container(
+                  height: 270,
+                  width: 370,
+                  decoration: const BoxDecoration(
+                    color: Primarycolors.color4,
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(4,4),
+                        blurRadius: 8,
+                        spreadRadius: 1,
+                        color: Primarycolors.color9
+                      )
                     ],
-                   )
-                      ],
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30)
                     ),
-                    Image.network('assets/footprint.png'),
-                    Image.network('assets/home2.png'),
-                 
-                            ]
+                  ),
+                  child: Row(
+                     mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget> [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children:  [
+                          const  Padding(padding: EdgeInsets.all(12)),
+                          const Text(
+                           'Air Purifier',
+                           style: TextStyle(
+                             fontWeight: FontWeight.bold,
+                             letterSpacing: 3,
+                             fontSize: 14,
+                             color: Primarycolors.color3
+                           ),
+                     ),
+                   const SizedBox(height: 10,),
+                   const  Text(
+                           'Peperomia',
+                           style: TextStyle(
+                             fontWeight: FontWeight.bold,
+                             letterSpacing: 5,
+                             fontSize: 17,
+                             color: Primarycolors.color3
+                           ),
+                     ),
+                    const Padding(padding: EdgeInsets.only(left: 12)),
+                      const SizedBox(height: 80,),
+                     Row(
+                      children: [
+                         const Text(
+                            '\$400',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15
                             ),
-              ),
+                            ), 
+                             const Padding(padding: EdgeInsets.only(right: 5)),
+                        Image.network('assets/favourite.png'),
+                    
+                              const Padding(padding: EdgeInsets.only(right: 5)),
+                               Image.network('assets/home4.png'),
+                      ],
+                     )
+                        ],
+                      ),
+                      Image.network('assets/footprint.png'),
+                      Image.network('assets/home2.png'),
+                   
+                              ]
+                              ),
+                              ),
+                ),
                ],
             ),
               ] 
@@ -137,75 +144,80 @@ class _home_screenState extends State<home_screen> {
                       Row(
               children: [
                const Padding(padding: EdgeInsets.only(left: 70)),
-                Container(
-                height: 270,
-                width: 380,
-                decoration: const BoxDecoration(
-                  color: Primarycolors.color7,
-                   boxShadow: [
-                    BoxShadow(
-                      offset: Offset(4,4),
-                      blurRadius: 8,
-                      spreadRadius: 1,
-                      color: Primarycolors.color4
-                    )
-                  ],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30)
-                  ),
-                ),
-                child: Row(
-                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget> [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children:    [
-                       const Padding(padding: EdgeInsets.all(12)),
-                      const  Text(
-                         'Air Purifier',
-                         style: TextStyle(
-                           fontWeight: FontWeight.bold,
-                           letterSpacing: 3,
-                           fontSize: 14,
-                           color: Primarycolors.color3
-                         ),
-                   ),
-               const  SizedBox(height: 10,),
-                 const  Text(
-                         'Watermelon',
-                         style: TextStyle(
-                           fontWeight: FontWeight.bold,
-                           letterSpacing: 5,
-                           fontSize: 17,
-                           color: Primarycolors.color3
-                         ),
-                   ),
-                  //  Padding(padding: EdgeInsets.only(left: 50, right: 50, bottom: 200)),
-                   const  SizedBox(height: 80,),
-                   Row(
-                    children: [
-                        const Text(
-                          '\$350',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 15
-                          ),
-                          ), 
-                          const Padding(padding: EdgeInsets.all(12.0)),
-                          Image.network('assets/favourite.png'),
-                            const Padding(padding: EdgeInsets.all(5.0)),
-                          // Image.network('assets/home1.png'),
-                       
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> another_bio()));
+                  },
+                  child: Container(
+                  height: 270,
+                  width: 380,
+                  decoration: const BoxDecoration(
+                    color: Primarycolors.color7,
+                     boxShadow: [
+                      BoxShadow(
+                        offset: Offset(4,4),
+                        blurRadius: 8,
+                        spreadRadius: 1,
+                        color: Primarycolors.color4
+                      )
                     ],
-                   )
-                      ],
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30)
                     ),
-                     Image.network('assets/footprint.png'),
-                  Image.network('assets/home2.png'),
-                 
-                       ]),
-                
-             ),
+                  ),
+                  child: Row(
+                     mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget> [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children:    [
+                         const Padding(padding: EdgeInsets.all(12)),
+                        const  Text(
+                           'Air Purifier',
+                           style: TextStyle(
+                             fontWeight: FontWeight.bold,
+                             letterSpacing: 3,
+                             fontSize: 14,
+                             color: Primarycolors.color3
+                           ),
+                     ),
+                               const  SizedBox(height: 10,),
+                   const  Text(
+                           'Watermelon',
+                           style: TextStyle(
+                             fontWeight: FontWeight.bold,
+                             letterSpacing: 5,
+                             fontSize: 17,
+                             color: Primarycolors.color3
+                           ),
+                     ),
+                    //  Padding(padding: EdgeInsets.only(left: 50, right: 50, bottom: 200)),
+                     const  SizedBox(height: 80,),
+                     Row(
+                      children: [
+                          const Text(
+                            '\$350',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15
+                            ),
+                            ), 
+                            const Padding(padding: EdgeInsets.all(12.0)),
+                            Image.network('assets/favourite.png'),
+                              const Padding(padding: EdgeInsets.all(5.0)),
+                            // Image.network('assets/home1.png'),
+                         
+                      ],
+                     )
+                        ],
+                      ),
+                       Image.network('assets/footprint.png'),
+                    Image.network('assets/home2.png'),
+                   
+                         ]),
+                  
+                             ),
+                ),
              ],
             ),
               ] 
@@ -382,7 +394,7 @@ class _home_screenState extends State<home_screen> {
         //         const Padding(padding: EdgeInsets.only(left: 5)),
         //         Container(
         //         height: 270,
-        //         width: 465,
+        //         width: 450,
         //         decoration: const BoxDecoration(
         //           color: Primarycolors.color9,
         //           borderRadius: BorderRadius.all(
@@ -407,7 +419,7 @@ class _home_screenState extends State<home_screen> {
         //            ),
         //          const SizedBox(height: 10,),
         //          const  Text(
-        //                  'Bird’s Nest Fern',
+        //                  "Bird's Nest Fern",
         //                  style: TextStyle(
         //                    fontWeight: FontWeight.bold,
         //                    letterSpacing: 5,
@@ -427,18 +439,18 @@ class _home_screenState extends State<home_screen> {
         //                   ),
         //                   ), 
         //                    const Padding(padding: EdgeInsets.only(right: 5)),
-        //                   Image.network('assets/favourite.png'),
+        //                   // Image.network('assets/favourite.png'),
         //                     const Padding(padding: EdgeInsets.only(right: 5)),
-        //                    InkWell(
-        //           onTap: (){},
-        //           child: Ink.image(image: AssetImage('assets/home4.png' ) )
-        //           ),
+        //           //          InkWell(
+        //           // onTap: (){},
+        //           // child: Ink.image(image: AssetImage('assets/home4.png' ) )
+        //           // ),
         //             ],
         //            )
         //               ],
         //             ),
-        //             Image.network('assets/footprint.png'),
-        //             Image.network(' assets/home6.png'),
+        //             // Image.network('assets/footprint.png'),
+        //             // Image.network(' assets/home6.png'),
                  
         //                     ]
         //                     ),
@@ -448,6 +460,91 @@ class _home_screenState extends State<home_screen> {
         //       ] 
         //     )
         //  ),
+
+
+      Container(
+            child: Column(
+              children: [
+                      Row(
+              children: [
+                const Padding(padding: EdgeInsets.only(left: 70)),
+                Container(
+                height: 270,
+                width: 370,
+                decoration: const BoxDecoration(
+                  color: Primarycolors.color4,
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(4,4),
+                      blurRadius: 8,
+                      spreadRadius: 1,
+                      color: Primarycolors.color9
+                    )
+                  ],
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30)
+                  ),
+                ),
+                child: Row(
+                   mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget> [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children:  [
+                        const  Padding(padding: EdgeInsets.all(12)),
+                        const Text(
+                         'Air Purifier',
+                         style: TextStyle(
+                           fontWeight: FontWeight.bold,
+                           letterSpacing: 3,
+                           fontSize: 14,
+                           color: Primarycolors.color3
+                         ),
+                   ),
+                 const SizedBox(height: 10,),
+                 const  Text(
+                         'Peperomia',
+                         style: TextStyle(
+                           fontWeight: FontWeight.bold,
+                           letterSpacing: 5,
+                           fontSize: 17,
+                           color: Primarycolors.color3
+                         ),
+                   ),
+                  const Padding(padding: EdgeInsets.only(left: 12)),
+                    const SizedBox(height: 80,),
+                   Row(
+                    children: [
+                       const Text(
+                          '\$400',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 15
+                          ),
+                          ), 
+                           const Padding(padding: EdgeInsets.only(right: 5)),
+                      Image.network('assets/favourite.png'),
+                  
+                            const Padding(padding: EdgeInsets.only(right: 5)),
+                             Image.network('assets/home4.png'),
+                    ],
+                   )
+                      ],
+                    ),
+                    Image.network('assets/footprint.png'),
+                    Image.network('assets/home2.png'),
+                 
+                            ]
+                            ),
+              ),
+               ],
+            ),
+              ] 
+            )
+         ),
+
+            
+
           const SizedBox(height: 60,),
            Column(
             children: [
@@ -455,7 +552,7 @@ class _home_screenState extends State<home_screen> {
               const SizedBox(height: 15,),
                 RichText(
                         text: const TextSpan(
-                         text:  "Caring for plants should be fun. That’s why we offer 1-on-1 virtual consultations from the comfort of your home or office. " ,
+                         text:  "Caring for plants should be fun. That's why we offer 1-on-1 virtual consultations from the comfort of your home or office. " ,
                       style: TextStyle(
                       color: Primarycolors.color3 , 
                        letterSpacing: 2,
@@ -505,6 +602,5 @@ class _home_screenState extends State<home_screen> {
        )
      ),
          );
-
   }
  }

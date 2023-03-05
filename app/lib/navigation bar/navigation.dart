@@ -1,8 +1,8 @@
 import 'package:app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:app/screens/checkout.dart';
+import 'package:app/screens/Cart_Item.dart';
 import 'package:app/screens/favourite.dart';
-import 'package:app/screens/orderdone.dart';
+import 'package:app/screens/order_done.dart';
 
 class navigation extends StatefulWidget {
   const navigation({super.key});
@@ -24,10 +24,9 @@ class _navigationState extends State<navigation> {
   final List <Widget> screens =[
     home_screen(),
     favourite(),
-    cart(),
+    CartScreen(),
     orderdone(),
-
-  ];
+   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +53,6 @@ class _navigationState extends State<navigation> {
              label: 'checkout',
           ),
         ],
-
  ),
     );
   }

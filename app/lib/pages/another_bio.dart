@@ -1,4 +1,5 @@
 import 'package:app/color_constants/utils.dart';
+import 'package:app/navigation%20bar/navigation.dart';
 import 'package:flutter/material.dart';
 
 class another_bio extends StatefulWidget {
@@ -25,8 +26,8 @@ class _another_bioState extends State<another_bio> {
         ),
       ),
       actions: const [
-        Icon(Icons.notifications , size: 25 , color: Primarycolors.color3,),
-        const SizedBox(width: 18,),
+         Icon(Icons.search , size: 25 , color: Primarycolors.color3,),
+         SizedBox(width: 18,),
          Icon(Icons.align_horizontal_right , size: 25 , color: Primarycolors.color3,),
       ],
      ),
@@ -136,8 +137,7 @@ class _another_bioState extends State<another_bio> {
                      Text('Overview' ,  style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 25),
                             ),
-                             SizedBox(height: 50,),
-                      
+                             SizedBox(height: 50,),    
                    ],
                  ),
                  Row(
@@ -186,7 +186,7 @@ class _another_bioState extends State<another_bio> {
          ),
             Row(
               children: [
-                Padding(padding: EdgeInsets.only(left: 20)),
+              const Padding(padding: EdgeInsets.only(left: 20)),
                 Container(
                 height: 100,
                 width: 200,
@@ -200,18 +200,34 @@ class _another_bioState extends State<another_bio> {
                 Row(
                    mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget> [
- 
+                    const Padding(padding: EdgeInsets.only(left: 17)),
                     Image.network('assets/home2.png'),
-                      Image.network('assets/footprint.png'),
-                 
+                    const Padding(padding: EdgeInsets.only(left: 15)),
+                    Image.network('assets/footprint.png'),
+                    Column(
+                     children:  [
+                      const Text('Air'),
+                      const Text('Purifier'),
+                      const Text('Peperomia'),
+                      const SizedBox(height: 5,),
+                      Row(
+                        children:  [
+                      const Text(
+                        '\$400' , 
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                        const Padding(padding: EdgeInsets.only(right: 15)),
+                        Image.network('assets/favourite.png'),
+                        ],
+                      ),
+                     ],
+                    )
                   ],
-              ),
-              
+              ),     
            ),
-
            Row(
               children: [
-                Padding(padding: EdgeInsets.only(left: 20)),
+               const Padding(padding: EdgeInsets.only(left: 20)),
                 Container(
                 height: 100,
                 width: 200,
@@ -224,8 +240,28 @@ class _another_bioState extends State<another_bio> {
                 child: Row(
                    mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget> [
+                  const Padding(padding: EdgeInsets.only(left: 5)),
                     Image.network('assets/footprint.png'),
+                  const Padding(padding: EdgeInsets.only(left: 15)),
                     Image.network('assets/home1.png'),
+                       Column(
+                     children:  [
+                      const Text('Air'),
+                      const Text('Purifier'),
+                      const Text('Croton Petra'),
+                      const SizedBox(height: 5,),
+                      Row(
+                        children:  [
+                      const Text(
+                        '\$200' , 
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                        const Padding(padding: EdgeInsets.only(right: 15)),
+                        Image.network('assets/favourite.png'),
+                        ],
+                      ),
+                     ],
+                    )
                   ]
               ),
               
@@ -258,22 +294,22 @@ class _another_bioState extends State<another_bio> {
                       fontSize: 20),
                       ),
                       const SizedBox(height: 20,),
-                       Padding(padding: EdgeInsets.only(left: 100 )),
-                      Text(
+                      const Padding(padding: EdgeInsets.only(left: 100 )),
+                     const Text(
                         "Just Scan and the AI will know exactly",
                         style: TextStyle(
                           wordSpacing: 3
                         ),
                         ),
-                         SizedBox(height: 20,),
+                        const SizedBox(height: 20,),
                          TextButton(
                           onPressed: (){},
-                          child: const Text('Scan Now' ),
+                          child: Text('Scan Now' ),
                            style: ButtonStyle(
                             foregroundColor: MaterialStateProperty.all(Primarycolors.color1),
                             backgroundColor: MaterialStateProperty.all(Primarycolors.color7),
                             shape: MaterialStateProperty.all <RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
+                              const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.zero,
                                 side: BorderSide(color: Primarycolors.color1)
                               )

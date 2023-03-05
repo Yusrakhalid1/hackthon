@@ -25,8 +25,8 @@ class _PlantBioState extends State<PlantBio> {
         ),
       ),
       actions: const [
-        Icon(Icons.notifications , size: 25 , color: Primarycolors.color3,),
-        const SizedBox(width: 18,),
+        Icon(Icons.search , size: 25 , color: Primarycolors.color3,),
+         SizedBox(width: 18,),
          Icon(Icons.align_horizontal_right , size: 25 , color: Primarycolors.color3,),
       ],
      ),
@@ -206,13 +206,13 @@ class _PlantBioState extends State<PlantBio> {
                    mainAxisAlignment: MainAxisAlignment.start,
                    crossAxisAlignment: CrossAxisAlignment.start,
                   children:  [
-                   Text('Air' , style:  TextStyle(fontWeight: FontWeight.bold),),
-                    Text('Purifier', style:  TextStyle(fontWeight: FontWeight.bold),),
-                    Text('Peperomia' , style:  TextStyle(fontWeight: FontWeight.bold),),
+                   const Text('Air' , style:  TextStyle(fontWeight: FontWeight.bold),),
+                    const Text('Purifier', style:  TextStyle(fontWeight: FontWeight.bold),),
+                    const Text('Peperomia' , style:  TextStyle(fontWeight: FontWeight.bold),),
                   Row(
                     children: [
-                      Padding(padding: EdgeInsets.only(left: 5 )),
-                       Text(
+                     const Padding(padding: EdgeInsets.only(left: 5 )),
+                     const  Text(
                   '\$350',
                   style: TextStyle(
                     fontSize: 17 , 
@@ -230,14 +230,14 @@ class _PlantBioState extends State<PlantBio> {
               ),
               
            ),
-            Row(
+                    Row(
               children: [
                 Padding(padding: EdgeInsets.only(left: 20)),
                 Container(
                 height: 100,
-                width: 250,
+                width: 200,
                 decoration: const BoxDecoration(
-                  color: Primarycolors.color9,
+                  color: Primarycolors.color4,
                   borderRadius: BorderRadius.all(
                     Radius.circular(20)
                   ),
@@ -246,19 +246,19 @@ class _PlantBioState extends State<PlantBio> {
                  Row(
                    mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget> [
-                    Image.network('assets/plant.png'),
+                    Image.network('assets/home6.png'),
                     Image.network('assets/footprint.png'),
                  Column(
                    mainAxisAlignment: MainAxisAlignment.start,
                    crossAxisAlignment: CrossAxisAlignment.start,
                   children:  [
-                   Text('Air' , style:  TextStyle(fontWeight: FontWeight.bold),),
-                    Text('Purifier', style:  TextStyle(fontWeight: FontWeight.bold),),
-                    Text('Cactus' , style:  TextStyle(fontWeight: FontWeight.bold),),
+                   const Text('Air' , style:  TextStyle(fontWeight: FontWeight.bold),),
+                    const Text('Purifier', style:  TextStyle(fontWeight: FontWeight.bold),),
+                    const Text("Bird's Nest Fern" , style:  TextStyle(fontWeight: FontWeight.bold),),
                   Row(
                     children: [
-                      Padding(padding: EdgeInsets.only(left: 5 )),
-                       Text(
+                     const Padding(padding: EdgeInsets.only(left: 5 )),
+                     const  Text(
                   '\$260',
                   style: TextStyle(
                     fontSize: 17 , 
@@ -267,69 +267,70 @@ class _PlantBioState extends State<PlantBio> {
                   ),
                   ),
                   const SizedBox(width: 8,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.favorite_outline))
+                  IconButton(onPressed: (){}, icon: Icon(Icons.favorite))
                     ],
                   )
                   ],
                  )
                   ],
               ),
+              
            ),
-
           const SizedBox(height: 30,),
-            Column(
-              children: [
-                Container(
-                height: 200,
-                width: 400,
-                decoration: const BoxDecoration(
-                  color: Primarycolors.color7,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+              Column(
+                children: [
+                  Container(
+                  height: 200,
+                  width: 400,
+                  decoration: const BoxDecoration(
+                    color: Primarycolors.color7,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                   image: DecorationImage( image: NetworkImage('assets/plantbio5.png') , alignment: Alignment.centerRight),
                   ),
-                 image: DecorationImage( image: NetworkImage('assets/plantbio5.png') , alignment: Alignment.centerRight),
-                ),
-               child:  Padding(
-                 padding: const EdgeInsets.only(right: 180 , top: 20),
-                 child: Column(
-                  children:  <Widget> [
-                   const Text(
-                      'That very plant?' , 
-                    style: TextStyle( 
-                      fontWeight: FontWeight.bold , 
-                      fontSize: 20),
-                      ),
-                      const SizedBox(height: 20,),
-                       Padding(padding: EdgeInsets.only(left: 100 )),
-                      Text(
-                        "Just Scan and the AI will know exactly",
-                        style: TextStyle(
-                          wordSpacing: 3
+                 child:  Padding(
+                   padding: const EdgeInsets.only(right: 180 , top: 20),
+                   child: Column(
+                    children:  <Widget> [
+                     const Text(
+                        'That very plant?' , 
+                      style: TextStyle( 
+                        fontWeight: FontWeight.bold , 
+                        fontSize: 20),
                         ),
-                        ),
-                         SizedBox(height: 20,),
-                         TextButton(
-                          onPressed: (){},
-                          child: const Text('Scan Now' ),
-                           style: ButtonStyle(
-                            foregroundColor: MaterialStateProperty.all(Primarycolors.color1),
-                            backgroundColor: MaterialStateProperty.all(Primarycolors.color7),
-                            shape: MaterialStateProperty.all <RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.zero,
-                                side: BorderSide(color: Primarycolors.color1)
-                              )
-                            )
-                            
-                           ),
+                        const SizedBox(height: 20,),
+                         const Padding(padding: EdgeInsets.only(left: 100 )),
+                       const Text(
+                          "Just Scan and the AI will know exactly",
+                          style: TextStyle(
+                            wordSpacing: 3
                           ),
-                  ],
+                          ),
+                          const SizedBox(height: 20,),
+                           TextButton(
+                            onPressed: (){},
+                            child: Text('Scan Now' ),
+                             style: ButtonStyle(
+                              foregroundColor: MaterialStateProperty.all(Primarycolors.color1),
+                              backgroundColor: MaterialStateProperty.all(Primarycolors.color7),
+                              shape: MaterialStateProperty.all <RoundedRectangleBorder>(
+                              const  RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  side: BorderSide(color: Primarycolors.color1)
+                                )
+                              )
+                              
+                             ),
+                            ),
+                    ],
+                   ),
                  ),
-               ),
-                ),
-              ],
+                  ),
+                ],
+              )]
             ),
     ]),
-    ]),])));
+    ])));
   }
 }
