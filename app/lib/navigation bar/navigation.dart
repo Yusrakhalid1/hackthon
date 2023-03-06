@@ -1,7 +1,7 @@
+import 'package:app/color_constants/utils.dart';
 import 'package:app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:app/screens/Cart_Item.dart';
-import 'package:app/screens/favourite.dart';
 import 'package:app/screens/order_done.dart';
 
 class navigation extends StatefulWidget {
@@ -22,10 +22,9 @@ class _navigationState extends State<navigation> {
   }
 
   final List <Widget> screens =[
-    home_screen(),
-    favourite(),
+    const home_screen(),
     CartScreen(),
-    orderdone(),
+    const orderdone(),
    ];
   @override
   Widget build(BuildContext context) {
@@ -39,10 +38,6 @@ class _navigationState extends State<navigation> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label:  'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
-            label: 'favourite',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag),

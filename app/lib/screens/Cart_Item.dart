@@ -1,6 +1,6 @@
 import 'package:app/color_constants/utils.dart';
 import 'package:app/navigation%20bar/navigation.dart';
-import 'package:app/screens/favourite.dart';
+import 'package:app/screens/drawer.dart';
 import 'package:app/screens/order_done.dart';
 import 'package:flutter/material.dart';
 
@@ -49,15 +49,26 @@ class _CartScreenState extends State<CartScreen> {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
-            color: Primarycolors.color3,
+            color: Primarycolors.color2,
             ), 
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> navigation()));
+            Navigator.push(
+              context, MaterialPageRoute(builder: (context)=> const navigation()));
           },
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(
+                context, MaterialPageRoute(builder: (context) => const drawer_screen()));
+            },
+             icon: const Icon(Icons.menu)
+             )
+        ],
       ),
+      drawer: const drawer_screen(),
       body: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

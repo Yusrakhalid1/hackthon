@@ -1,7 +1,6 @@
 import 'package:app/color_constants/utils.dart';
 import 'package:app/pages/PlantBio.dart';
 import 'package:app/pages/another_bio.dart';
-import 'package:app/screens/favourite.dart';
 import 'package:app/screens/home_screen.dart';
 import 'package:app/navigation%20bar/navigation.dart';
 import 'package:flutter/material.dart';
